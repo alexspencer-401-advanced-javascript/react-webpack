@@ -8,7 +8,7 @@ function write(str, path) {
 }
 
 function writeJson(obj, path) {
-  fs.writeFileSync(path, JSON.stringify(obj));
+  fs.writeFileSync(path, JSON.stringify(obj, null, 2));
   const pathTarget = path.lastIndexOf('/');
   const result = path.slice(pathTarget + 1, pathTarget.length);
   console.log(result + ' created');

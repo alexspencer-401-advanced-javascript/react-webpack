@@ -3,8 +3,8 @@ const fs = require('fs');
 const args = process.argv;
 const folder = args[args.length - 1];
 
-if(folder !== '.') fs.mkdir(folder);
-fs.mkdir(`${folder}/src`);
+if(folder !== '.') fs.mkdirSync(folder);
+fs.mkdirSync(`${folder}/src`);
 
 const webpackWriter = require('./writer/webpack-writer');
 const travisWriter = require('./writer/travis-writer');

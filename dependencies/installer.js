@@ -1,4 +1,5 @@
 module.exports = function installer(path, packages, dev) {
+  console.log('installing all packages');
   const { execSync } = require('child_process');
   let d;
   if(dev) d = '-D';
@@ -8,4 +9,5 @@ module.exports = function installer(path, packages, dev) {
     cwd: path,
     stdio: 'inherit'
   });
+  console.log('package install complete');
 };
