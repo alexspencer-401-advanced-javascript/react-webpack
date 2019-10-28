@@ -27,6 +27,9 @@ module.exports = function packageJson(path) {
     'keywords': [],
     'author': '',
     'license': 'ISC',
+    'bin': {
+      'create-YOUR-app': './index.js'
+    },
     'dependencies': {
       'react': '^16.11.0',
       'react-dom': '^16.11.0'
