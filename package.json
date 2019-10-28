@@ -24,7 +24,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bin": {
+    "create-YOUR-app": "./index.js"
+  },
   "dependencies": {
+    "chalk": "^2.4.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
