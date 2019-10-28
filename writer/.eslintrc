@@ -1,34 +1,53 @@
 {
+  "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": 9,
+    "ecmaFeatures": {
+      "impliedStrict": true
+    },
     "sourceType": "module"
   },
-  "parser": "babel-eslint",
   "env": {
-    "es6": true,
-    "browser": true,
-    "jest": true
+    "node": true,
+    "commonjs": true,
+    "jest": true,
+    "es6": true
   },
-  "plugins": [
-    "babel",
-    "react"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
+  "globals": {},
   "rules": {
-    "no-console": "warn",
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    "no-console": "off",
     "indent": [
       "error",
       2,
       {
-        "SwitchCase": 1
+        "SwitchCase": 1,
+        "ignoreComments": true
       }
     ],
     "quotes": [
       "error",
-      "single"
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "no-multi-spaces": [
+      "error",
+      {
+        "ignoreEOLComments": true
+      }
+    ],
+    "new-cap": "error",
+    "no-redeclare": [
+      "error",
+      {
+        "builtinGlobals": true
+      }
     ],
     "semi": [
       "error",
@@ -47,29 +66,25 @@
       "error",
       "never"
     ],
-    "eol-last": [
-      "error",
-      "always"
-    ],
     "keyword-spacing": [
       "error",
       {
         "before": true,
         "after": true,
         "overrides": {
-          "do": {
+          "if": {
             "after": false
           },
           "for": {
             "after": false
           },
-          "if": {
+          "while": {
+            "after": false
+          },
+          "do": {
             "after": false
           },
           "switch": {
-            "after": false
-          },
-          "while": {
             "after": false
           },
           "catch": {
@@ -78,8 +93,6 @@
         }
       }
     ],
-    "array-bracket-spacing": "error",
-    "babel/no-invalid-this": 1,
-    "babel/semi": 0
+    "array-bracket-spacing": "error"
   }
 }
