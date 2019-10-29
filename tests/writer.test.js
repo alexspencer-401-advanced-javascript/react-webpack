@@ -14,7 +14,7 @@ describe('writer.js test', () => {
   it('writes a file with stringified object and path', () => {
     writeJson({ name: 'alex' }, './data_test/testing_json.txt');
     expect(fs.writeFileSync.mock.calls[1][0]).toBe('./data_test/testing_json.txt');
-    expect(fs.writeFileSync.mock.calls[1][1]).toBe(JSON.stringify({ name: 'alex' }));
+    expect(fs.writeFileSync.mock.calls[1][1]).toBe(JSON.stringify({ name: 'alex' }, null, 2));
   });
 
 });
