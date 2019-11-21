@@ -2,7 +2,7 @@ const { writeJson } = require('./writer');
 
 module.exports = function packageJson(path) {
   const obj = {
-    'name': 'starter-code',
+    'name': 'new-react-project',
     'version': '1.0.0',
     'description': '',
     'main': 'src/index.js',
